@@ -76,88 +76,8 @@
               </transition>
             </transitions>
           </state>
-          <state id="approved" _delta="redefine">
-            <flags>
-              <attribute id="ref">
-                <read_only/>
-              </attribute>
-              <attribute id="org_id">
-                <mandatory/>
-              </attribute>
-              <attribute id="caller_id">
-                <mandatory/>
-              </attribute>
-              <attribute id="agent_id">
-                <hidden/>
-              </attribute>
-              <attribute id="priority">
-                <read_only/>
-              </attribute>
-              <attribute id="start_date">
-                <read_only/>
-              </attribute>
-              <attribute id="last_update">
-                <read_only/>
-              </attribute>
-              <attribute id="close_date">
-                <hidden/>
-              </attribute>
-              <attribute id="approver_id">
-                <read_only/>
-              </attribute>
-              <attribute id="escalation_flag">
-                <hidden/>
-              </attribute>
-              <attribute id="escalation_reason">
-                <hidden/>
-              </attribute>
-              <attribute id="assignment_date">
-                <hidden/>
-              </attribute>
-              <attribute id="resolution_date">
-                <hidden/>
-              </attribute>
-              <attribute id="last_pending_date">
-                <hidden/>
-              </attribute>
-              <attribute id="time_spent">
-                <hidden/>
-              </attribute>
-              <attribute id="resolution_code">
-                <hidden/>
-              </attribute>
-              <attribute id="solution">
-                <hidden/>
-              </attribute>
-              <attribute id="pending_reason">
-                <hidden/>
-              </attribute>
-              <attribute id="user_satisfaction">
-                <hidden/>
-              </attribute>
-              <attribute id="user_comment">
-                <hidden/>
-              </attribute>
-              <attribute id="tto_escalation_deadline">
-                <readonly/>
-              </attribute>
-              <attribute id="sla_tto_passed">
-                <hidden/>
-              </attribute>
-              <attribute id="sla_tto_over">
-                <hidden/>
-              </attribute>
-              <attribute id="sla_ttr_passed">
-                <hidden/>
-              </attribute>
-              <attribute id="ttr_escalation_deadline">
-                <hidden/>
-              </attribute>
-              <attribute id="sla_ttr_over">
-                <hidden/>
-              </attribute>
-            </flags>
-            <transitions>
+          <state id="approved" _delta="must_exist">
+            <transitions _delta="redefine">
               <transition>
                 <stimulus>ev_timeout</stimulus>
                 <target>escalated_tto</target>
@@ -506,14 +426,12 @@
 			if ($iEscalationDeadline != null)
 			{
 				// A SLA is running
-				$iStartDate = AttributeDateTime::GetAsUnixSeconds($this->Get('start_date'));
-	
-				$ratio = ($iEscalationDeadline - time())/($iEscalationDeadline - $iStartDate);
-				if ($ratio <= 0)
+				$oTTOStopWatch = $this->Get('tto');
+				if ($oTTOStopWatch->IsThresholdPassed(100))
 				{
 					$sIcon = self::MakeIconFromName('user-request-escalated.png');
 				}
-				else if ($ratio <= 0.25)
+				else if ($oTTOStopWatch->IsThresholdPassed(75))
 				{
 					$sIcon = self::MakeIconFromName('user-request-deadline.png');
 				}
@@ -527,13 +445,12 @@
 			if ($iEscalationDeadline != null)
 			{
 				// A SLA is running
-				$iStartDate = AttributeDateTime::GetAsUnixSeconds($this->Get('start_date'));
-				$ratio = ($iEscalationDeadline - time())/($iEscalationDeadline - $iStartDate);
-				if ($ratio <= 0)
+				$oTTRStopWatch = $this->Get('ttr');
+				if ($oTTRStopWatch->IsThresholdPassed(100))
 				{
 					$sIcon = self::MakeIconFromName('user-request-escalated.png');
 				}
-				else if ($ratio <= 0.25)
+				else if ($oTTRStopWatch->IsThresholdPassed(75))
 				{
 					$sIcon = self::MakeIconFromName('user-request-deadline.png');
 				}
@@ -562,13 +479,12 @@
 			if ($iEscalationDeadline != null)
 			{
 				// A SLA is running
-				$iStartDate = AttributeDateTime::GetAsUnixSeconds($this->Get('start_date'));
-				$ratio = ($iEscalationDeadline - time())/($iEscalationDeadline - $iStartDate);
-				if ($ratio <= 0)
+                $oTTOStopWatch = $this->Get('tto');
+				if ($oTTOStopWatch->IsThresholdPassed(100))
 				{
 					$sHilightClass = HILIGHT_CLASS_CRITICAL;
 				}
-				else if ($ratio <= 0.25)
+				else if ($oTTOStopWatch->IsThresholdPassed(75))
 				{
 					$sHilightClass = HILIGHT_CLASS_WARNING;
 				}
@@ -581,13 +497,12 @@
 			if ($iEscalationDeadline != null)
 			{
 				// A SLA is running
-				$iStartDate = AttributeDateTime::GetAsUnixSeconds($this->Get('start_date'));
-				$ratio = ($iEscalationDeadline - time())/($iEscalationDeadline - $iStartDate);
-				if ($ratio <= 0)
+                $oTTRStopWatch = $this->Get('ttr');
+				if ($oTTRStopWatch->IsThresholdPassed(100))
 				{
 					$sHilightClass = HILIGHT_CLASS_CRITICAL;
 				}
-				else if ($ratio <= 0.25)
+				else if ($oTTRStopWatch->IsThresholdPassed(75))
 				{
 					$sHilightClass = HILIGHT_CLASS_WARNING;
 				}
@@ -606,6 +521,13 @@
     </class>
   </classes>
   <menus>
+    <menu id="UserRequest:RequestsDispatchedToMyTeams" xsi:type="OQLMenuNode" _delta="define">
+      <rank>0.5</rank>
+      <parent>UserRequest:Shortcuts</parent>
+      <oql><![CDATA[SELECT UserRequest JOIN Team ON UserRequest.team_id = Team.id JOIN lnkPersonToTeam AS L ON L.team_id = Team.id WHERE L.person_id = :current_contact_id AND UserRequest.status IN ("dispatched", "redispatched")]]></oql>
+      <do_search/>
+      <auto_reload>fast</auto_reload>
+    </menu>
   </menus>
   <user_rights>
     <profiles>
