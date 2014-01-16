@@ -376,6 +376,57 @@
               </transition>
             </transitions>
           </state>
+          <state id="escalated_ttr">
+            <transitions _delta="redefine">
+              <transition>
+                <stimulus>ev_pending</stimulus>
+                <target>pending</target>
+                <actions>
+                  <action>
+                    <verb>SetLastPendingDate</verb>
+                  </action>
+                </actions>
+              </transition>
+              <transition>
+                <stimulus>ev_resolve</stimulus>
+                <target>resolved</target>
+                <actions>
+                  <action>
+                    <verb>SetResolveDate</verb>
+                  </action>
+                  <action>
+                    <verb>resolveChilds</verb>
+                  </action>
+                </actions>
+              </transition>
+              <transition>
+                <stimulus>ev_dispatch</stimulus>
+                <target>redispatched</target>
+                <actions>
+                  <action>
+                    <verb>ResetAgent</verb>
+                  </action>
+                </actions>
+              </transition>
+              <transition>
+                <stimulus>ev_reassign</stimulus>
+                <target>assigned</target>
+                <actions/>
+              </transition>
+              <transition>
+                <stimulus>ev_autoresolve</stimulus>
+                <target>resolved</target>
+                <actions>
+                  <action>
+                    <verb>SetResolveDate</verb>
+                  </action>
+                  <action>
+                    <verb>resolveChilds</verb>
+                  </action>
+                </actions>
+              </transition>
+            </transitions>
+          </state>          
         </states>
       </lifecycle>
       <methods>
@@ -524,7 +575,7 @@
     <menu id="UserRequest:RequestsDispatchedToMyTeams" xsi:type="OQLMenuNode" _delta="define">
       <rank>0.5</rank>
       <parent>UserRequest:Shortcuts</parent>
-      <oql><![CDATA[SELECT UserRequest JOIN Team ON UserRequest.team_id = Team.id JOIN lnkPersonToTeam AS L ON L.team_id = Team.id WHERE L.person_id = :current_contact_id AND UserRequest.status IN ("dispatched", "redispatched")]]></oql>
+      <oql><![CDATA[SELECT UserRequest JOIN Team ON UserRequest.team_id = Team.id JOIN lnkPersonToTeam AS L ON L.team_id = Team.id WHERE L.person_id = :current_contact_id AND UserRequest.status NOT IN ("resolved", "closed")]]></oql>
       <do_search/>
       <auto_reload>fast</auto_reload>
     </menu>

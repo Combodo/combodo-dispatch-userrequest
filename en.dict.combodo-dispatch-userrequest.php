@@ -12,6 +12,6 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Redispatched',
 	'Class:UserRequest/Stimulus:ev_dispatch' => 'Dispatch to a team',
 	// Menu entry
-	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Requests Dispatched to my Teams',
-	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Requests Dispatched to one of my Teams',
+	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Requests dispatched to my teams',
+	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Open requests dispatched to one of my teams',
 ));
