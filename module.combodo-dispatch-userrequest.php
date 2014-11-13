@@ -5,7 +5,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-	'combodo-dispatch-userrequest/1.0.1',
+	'combodo-dispatch-userrequest/1.1.0',
 	array(
 		// Identification
 		//
@@ -15,8 +15,8 @@ SetupWebPage::AddModule(
 		// Setup
 		//
 		'dependencies' => array(
-			'itop-request-mgmt/2.0.0||itop-request-mgmt-itil/2.0.0',
-			'itop-profiles-itil/1.0.0'
+			'itop-request-mgmt/2.1.0||itop-request-mgmt-itil/2.1.0',
+			'itop-profiles-itil/2.1.0'
 		),
 		'mandatory' => false,
 		'visible' => true,
