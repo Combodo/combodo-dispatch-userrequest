@@ -49,7 +49,10 @@
                 <target>redispatched</target>
                 <actions>
                   <action>
-                    <verb>ResetAgent</verb>
+                    <verb>Reset</verb>
+                    <params>
+                      <param xsi:type="string">agent_id</param>
+                    </params>
                   </action>
                 </actions>
               </transition>
@@ -68,7 +71,10 @@
                 <target>assigned</target>
                 <actions>
                   <action>
-                    <verb>SetAssignedDate</verb>
+                    <verb>SetCurrentDate</verb>
+                    <params>
+                      <param xsi:type="string">assignment_date</param>
+                    </params>
                   </action>
                 </actions>
               </transition>
@@ -80,10 +86,22 @@
                 <target>resolved</target>
                 <actions>
                   <action>
-                    <verb>SetResolveDate</verb>
+                    <verb>SetCurrentDate</verb>
+                    <params>
+                      <param xsi:type="string">resolution_date</param>
+                    </params>
                   </action>
                   <action>
-                    <verb>resolveChilds</verb>
+                    <verb>SetElapsedTime</verb>
+                    <params>
+                      <param xsi:type="string">time_spent</param>
+                      <param xsi:type="string">start_date</param>
+                      <param xsi:type="string">DefaultWorkingTimeComputer</param>
+                    </params>
+                  </action>
+                  <action>
+                    <verb>ResolveChildTickets</verb>
+                    <params/>
                   </action>
                 </actions>
               </transition>
@@ -113,10 +131,22 @@
                 <target>resolved</target>
                 <actions>
                   <action>
-                    <verb>SetResolveDate</verb>
+                    <verb>SetCurrentDate</verb>
+                    <params>
+                      <param xsi:type="string">resolution_date</param>
+                    </params>
                   </action>
                   <action>
-                    <verb>resolveChilds</verb>
+                    <verb>SetElapsedTime</verb>
+                    <params>
+                      <param xsi:type="string">time_spent</param>
+                      <param xsi:type="string">start_date</param>
+                      <param xsi:type="string">DefaultWorkingTimeComputer</param>
+                    </params>
+                  </action>
+                  <action>
+                    <verb>ResolveChildTickets</verb>
+                    <params/>
                   </action>
                 </actions>
               </transition>
@@ -128,7 +158,10 @@
                 <target>redispatched</target>
                 <actions>
                   <action>
-                    <verb>ResetAgent</verb>
+                    <verb>Reset</verb>
+                    <params>
+                      <param xsi:type="string">agent_id</param>
+                    </params>
                   </action>
                 </actions>
               </transition>
@@ -138,6 +171,9 @@
       </lifecycle>
       <methods>
         <method id="ResetAgent" _delta="define">
+          <comment><![CDATA[/**
+	 * To be deprecated: use Reset(agent_id) instead
+	 */]]></comment>
           <static>false</static>
           <access>public</access>
           <type>LifecycleAction</type>
