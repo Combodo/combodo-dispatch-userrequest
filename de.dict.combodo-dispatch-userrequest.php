@@ -2,16 +2,16 @@
 /**
  * Localized data
  *
- * @copyright   Copyright (C) 2013 Combodo SARL
+ * @copyright   Copyright (C) 2017 Combodo SARL
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	// Dictionary entries go here
-	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Verteilt',
-	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Erneut verteilt',
-	'Class:UserRequest/Stimulus:ev_dispatch' => 'An ein Team verteilen',
+	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Weitergeleitet',
+	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Neu weitergeleitet',
+	'Class:UserRequest/Stimulus:ev_dispatch' => 'An ein Team weiterleiten',
 	// Menu entry
-	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'An mein Team verteilte Anfragen',
-	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Offene Anfragen, die an mein Team verteilt worden sind',
+	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Anfragen, die an mein Team weitergeleitet wurden',
+	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Offene Anfragen, die an mein Team weitergeleitet wurden',
 ));
