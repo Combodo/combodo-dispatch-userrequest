@@ -8,8 +8,8 @@
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	// Dictionary entries go here
-	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Zugewiesen',
-	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Erneut zugewiesen',
+	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Verteilt',
+	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Erneut verteilt',
 	'Class:UserRequest/Stimulus:ev_dispatch' => 'Einem Team zuweisen',
 	// Menu entry
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'An mein Team zugewiesene Requests',
