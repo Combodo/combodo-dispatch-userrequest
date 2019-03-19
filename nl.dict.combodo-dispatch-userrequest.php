@@ -6,7 +6,6 @@
  * @copyright   Copyright (C) 2018 Combodo SARL
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
-
 Dict::Add('NL NL', 'Dutch', 'Nederlands', array(
 	// Dictionary entries go here
 	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Dispatched',
