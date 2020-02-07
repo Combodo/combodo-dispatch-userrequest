@@ -15,3 +15,14 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Requests dispatched to my teams',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Open requests dispatched to one of my teams',
 ));
+
+//
+// Class: UserRequest
+//
+
+Dict::Add('EN US', 'English', 'English', array(
+	'Class:UserRequest/Attribute:tto' => 'Tto',
+	'Class:UserRequest/Attribute:tto+' => '',
+	'Class:UserRequest/Attribute:ttr' => 'Ttr',
+	'Class:UserRequest/Attribute:ttr+' => '',
+));

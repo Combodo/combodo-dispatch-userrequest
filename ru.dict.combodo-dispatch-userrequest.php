@@ -16,3 +16,14 @@ Dict::Add('RU RU', 'Russian', 'Русский', array(
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Направленные в мои команды',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Открытые запросы, направленные в мои команды',
 ));
+
+//
+// Class: UserRequest
+//
+
+Dict::Add('RU RU', 'Russian', 'Русский', array(
+	'Class:UserRequest/Attribute:tto' => 'Tto~~',
+	'Class:UserRequest/Attribute:tto+' => '~~',
+	'Class:UserRequest/Attribute:ttr' => 'Ttr~~',
+	'Class:UserRequest/Attribute:ttr+' => '~~',
+));
