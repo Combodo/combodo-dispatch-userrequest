@@ -6,7 +6,6 @@
  * @copyright   Copyright (C) 2018 Combodo SARL
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
-
 Dict::Add('NL NL', 'Dutch', 'Nederlands', array(
 	// Dictionary entries go here
 	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Dispatched',
@@ -15,4 +14,15 @@ Dict::Add('NL NL', 'Dutch', 'Nederlands', array(
 	// Menu entry
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Verzoeken dispatched naar mijn teams',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Open verzoeken dispatched naar een van mijn teams',
+));
+
+//
+// Class: UserRequest
+//
+
+Dict::Add('NL NL', 'Dutch', 'Nederlands', array(
+	'Class:UserRequest/Attribute:tto' => 'Tto~~',
+	'Class:UserRequest/Attribute:tto+' => '~~',
+	'Class:UserRequest/Attribute:ttr' => 'Ttr~~',
+	'Class:UserRequest/Attribute:ttr+' => '~~',
 ));
