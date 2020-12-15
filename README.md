@@ -4,8 +4,6 @@
 
 This is one of the modules used in the Dispatch User Request to a team extension for [iTop](https://github.com/Combodo/iTop).
 
-For more information about this module have a look at the corresponding [extension documentation](https://store.itophub.io/en_US/products/combodo-mail-to-ticket-automation).
-
 
 ## Download
 
