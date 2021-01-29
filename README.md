@@ -17,3 +17,14 @@ When downloading directly from GitHub (by cloning or downloading as zip) you wil
 ## About Us
 
 This iTop module development is sponsored, led and supported by [Combodo](https://www.combodo.com).
+
+## Contributors
+
+We would like to give a special thank you to the people from the community who contributed to this project, including:
+
+### Names
+ - Casteleyn, Thomas (a.k.a @Hipska)
+ - Mindêllo de Andrade, Lucas (a.k.a @rokam)
+
+### Companies
+ - Super-Visions
