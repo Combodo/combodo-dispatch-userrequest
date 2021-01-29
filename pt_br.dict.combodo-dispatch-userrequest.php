@@ -26,8 +26,8 @@ Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
 	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Reencaminhado',
 	'Class:UserRequest/Stimulus:ev_dispatch' => 'Encaminhar para uma equipe',
 	// Menu entry
-	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Solicitações encaminhadas para meus times',
-	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Solicitações abertas para algum dos meus times',
+	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Solicitações encaminhadas para minhas equipes',
+	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Solicitações abertas para alguma de minhas equipes',
 ));
 
 //
