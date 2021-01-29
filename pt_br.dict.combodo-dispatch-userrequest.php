@@ -22,12 +22,12 @@
  */
 Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
 	// Dictionary entries go here
-	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Dispatched~~',
-	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Redispatched~~',
-	'Class:UserRequest/Stimulus:ev_dispatch' => 'Dispatch to a team~~',
+	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Encaminhado',
+	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Reencaminhado',
+	'Class:UserRequest/Stimulus:ev_dispatch' => 'Encaminhar para uma equipe',
 	// Menu entry
-	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Requests dispatched to my teams~~',
-	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Open requests dispatched to one of my teams~~',
+	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Solicitações encaminhadas para meus times',
+	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Solicitações abertas para algum dos meus times',
 ));
 
 //
@@ -35,8 +35,8 @@ Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
 //
 
 Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
-	'Class:UserRequest/Attribute:tto' => 'Tto~~',
-	'Class:UserRequest/Attribute:tto+' => '~~',
-	'Class:UserRequest/Attribute:ttr' => 'Ttr~~',
-	'Class:UserRequest/Attribute:ttr+' => '~~',
+	'Class:UserRequest/Attribute:tto' => 'TTO',
+	'Class:UserRequest/Attribute:tto+' => 'Tempo de atribuição',
+	'Class:UserRequest/Attribute:ttr' => 'TTR',
+	'Class:UserRequest/Attribute:ttr+' => 'Tempo de resolução',
 ));
