@@ -29,14 +29,3 @@ Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Solicitações encaminhadas para minhas equipes',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Solicitações abertas para alguma de minhas equipes',
 ));
-
-//
-// Class: UserRequest
-//
-
-Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
-	'Class:UserRequest/Attribute:tto' => 'TTO',
-	'Class:UserRequest/Attribute:tto+' => 'Tempo de atribuição',
-	'Class:UserRequest/Attribute:ttr' => 'TTR',
-	'Class:UserRequest/Attribute:ttr+' => 'Tempo de resolução',
-));

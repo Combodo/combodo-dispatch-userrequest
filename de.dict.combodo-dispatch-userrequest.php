@@ -14,14 +14,3 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'An mein Team zugewiesene Requests',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Offene Requests, die meinem Team zugewiesen wurden',
 ));
-
-//
-// Class: UserRequest
-//
-
-Dict::Add('DE DE', 'German', 'Deutsch', array(
-	'Class:UserRequest/Attribute:tto' => 'Tto~~',
-	'Class:UserRequest/Attribute:tto+' => '~~',
-	'Class:UserRequest/Attribute:ttr' => 'Ttr~~',
-	'Class:UserRequest/Attribute:ttr+' => '~~',
-));

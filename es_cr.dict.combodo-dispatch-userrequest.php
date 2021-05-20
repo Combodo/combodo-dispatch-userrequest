@@ -14,14 +14,3 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Requerimientos despachados a mis equipos',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Requerimientos despachados a mis equipos de soporte',
 ));
-
-//
-// Class: UserRequest
-//
-
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
-	'Class:UserRequest/Attribute:tto' => 'Tto~~',
-	'Class:UserRequest/Attribute:tto+' => '~~',
-	'Class:UserRequest/Attribute:ttr' => 'Ttr~~',
-	'Class:UserRequest/Attribute:ttr+' => '~~',
-));

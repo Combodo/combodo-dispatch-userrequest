@@ -15,14 +15,3 @@ Dict::Add('NL NL', 'Dutch', 'Nederlands', array(
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Verzoeken dispatched naar mijn teams',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Open verzoeken dispatched naar een van mijn teams',
 ));
-
-//
-// Class: UserRequest
-//
-
-Dict::Add('NL NL', 'Dutch', 'Nederlands', array(
-	'Class:UserRequest/Attribute:tto' => 'Tto~~',
-	'Class:UserRequest/Attribute:tto+' => '~~',
-	'Class:UserRequest/Attribute:ttr' => 'Ttr~~',
-	'Class:UserRequest/Attribute:ttr+' => '~~',
-));

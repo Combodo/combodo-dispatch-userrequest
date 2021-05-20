@@ -14,14 +14,3 @@ Dict::Add('SK SK', 'Slovak', 'Slovenčina', array(
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Requests dispatched to my teams~~',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Open requests dispatched to one of my teams~~',
 ));
-
-//
-// Class: UserRequest
-//
-
-Dict::Add('SK SK', 'Slovak', 'Slovenčina', array(
-	'Class:UserRequest/Attribute:tto' => 'Tto~~',
-	'Class:UserRequest/Attribute:tto+' => '~~',
-	'Class:UserRequest/Attribute:ttr' => 'Ttr~~',
-	'Class:UserRequest/Attribute:ttr+' => '~~',
-));
