@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
   <classes>
     <class id="UserRequest" _delta="must_exist">
       <fields>
         <field id="status" xsi:type="AttributeEnum" _delta="must_exist">
           <values>
-            <value id="dispatched" _delta="define">dispatched</value>
-            <value id="redispatched" _delta="define">redispatched</value>
+            <value id="dispatched" _delta="define">
+              <code>dispatched</code>
+              <rank>50</rank>
+              <style>
+                <main_color>$ibo-lifecycle-neutral-state-primary-color</main_color>
+                <complementary_color>$ibo-lifecycle-neutral-state-secondary-color</complementary_color>
+                <decoration_classes/>
+              </style>
+            </value>
+            <value id="redispatched" _delta="define">
+              <code>redispatched</code>
+              <rank>55</rank>
+              <style>
+                <main_color>$ibo-lifecycle-neutral-state-primary-color</main_color>
+                <complementary_color>$ibo-lifecycle-neutral-state-secondary-color</complementary_color>
+                <decoration_classes/>
+              </style>
+            </value>
           </values>
         </field>
         <field id="tto" xsi:type="AttributeStopWatch" _delta="must_exist">
