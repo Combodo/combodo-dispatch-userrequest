@@ -231,6 +231,15 @@
           </group>
         </groups>
       </profile>
+      <profile id="117" _delta="if_exists">
+        <groups>
+          <group id="UserRequest" _delta="if_exists">
+            <actions>
+              <action id="stimulus:ev_dispatch" _delta="define_if_not_exists">allow</action>
+            </actions>
+          </group>
+        </groups>
+      </profile>
     </profiles>
   </user_rights>
 </itop_design>
