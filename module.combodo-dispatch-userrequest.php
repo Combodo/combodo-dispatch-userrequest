@@ -20,7 +20,7 @@ SetupWebPage::AddModule(
 		),
 		'mandatory' => false,
 		'visible' => true,
-		'uninstallable' => 'yes',
+		'uninstallable' => 'no',
 
 		// Components
 		//
