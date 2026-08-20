@@ -13,6 +13,6 @@ Dict::Add('DA DA', 'Danish', 'Dansk', [
 	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Dispatched~~',
 	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Redispatched~~',
 	'Class:UserRequest/Stimulus:ev_dispatch' => 'Dispatch to a team~~',
-	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Requests dispatched to my teams~~',
+	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Dispatched to my teams~~',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Open requests dispatched to one of my teams~~',
 ]);
