@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Localized data
  *
@@ -6,7 +7,7 @@
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
 
-Dict::Add('EN US', 'English', 'English', array(
+Dict::Add('EN US', 'English', 'English', [
 	// Dictionary entries go here
 	'Class:UserRequest/Attribute:status/Value:dispatched' => 'Dispatched',
 	'Class:UserRequest/Attribute:status/Value:redispatched' => 'Redispatched',
@@ -14,4 +15,4 @@ Dict::Add('EN US', 'English', 'English', array(
 	// Menu entry
 	'Menu:UserRequest:RequestsDispatchedToMyTeams' => 'Dispatched to my teams',
 	'Menu:UserRequest:RequestsDispatchedToMyTeams+' => 'Open requests dispatched to one of my teams',
-));
+]);

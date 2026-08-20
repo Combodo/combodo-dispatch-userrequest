@@ -1,4 +1,5 @@
 <?php
+
 //
 // iTop module definition file
 //
@@ -6,7 +7,7 @@
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
 	'combodo-dispatch-userrequest/1.2.2',
-	array(
+	[
 		// Identification
 		//
 		'label' => 'Dispatch of User Request',
@@ -14,28 +15,28 @@ SetupWebPage::AddModule(
 
 		// Setup
 		//
-		'dependencies' => array(
+		'dependencies' => [
 			'itop-request-mgmt/3.0.0||itop-request-mgmt-itil/3.0.0',
-			'itop-profiles-itil/3.0.0'
-		),
+			'itop-profiles-itil/3.0.0',
+		],
 		'mandatory' => false,
 		'visible' => true,
 		'uninstallable' => 'no',
 
 		// Components
 		//
-		'datamodel' => array(
-			'model.combodo-dispatch-userrequest.php'
-		),
-		'webservice' => array(
+		'datamodel' => [
+			'model.combodo-dispatch-userrequest.php',
+		],
+		'webservice' => [
 
-		),
-		'data.struct' => array(
+		],
+		'data.struct' => [
 			// add your 'structure' definition XML files here,
-		),
-		'data.sample' => array(
+		],
+		'data.sample' => [
 			// add your sample data XML files here,
-		),
+		],
 
 		// Documentation
 		//
@@ -44,11 +45,8 @@ SetupWebPage::AddModule(
 
 		// Default settings
 		//
-		'settings' => array(
+		'settings' => [
 			// Module specific settings go here, if any
-		),
-	)
+		],
+	]
 );
-
-
-?>
